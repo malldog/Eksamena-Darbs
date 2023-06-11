@@ -3,18 +3,20 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class ChangeButtonImage : MonoBehaviour
+public class MainScript : MonoBehaviour
 {
     public Objects objectScript;
+    public Score scoreScript;
+    public Audio audioScript;
     private bool correct = false;
     //parbauda vai jautajums jau ir atbildets. q == question
     private bool q1= false, q2= false, q3= false, q4= false, q5= false, q6= false, q7= false,
      q8= false, q9= false, q10= false;
-
-    private bool button1Clicked = false;
-    private bool button2Clicked = false;
-    private bool button3Clicked = false;
-    private bool button4Clicked = false;
+    public bool button1Clicked = false;
+    public bool button2Clicked = false;
+    public bool button3Clicked = false;
+    public bool button4Clicked = false;
+    
     void Update()
     {
       
@@ -50,7 +52,6 @@ public class ChangeButtonImage : MonoBehaviour
         objectScript.button4.interactable = false;
         button1Clicked=false;
         button2Clicked=false;
-        button3Clicked=false;
         button4Clicked=false;
         yield return new WaitForSeconds(3f);
         objectScript.button1.image.sprite = objectScript.img3;
@@ -86,8 +87,27 @@ public class ChangeButtonImage : MonoBehaviour
             Q9Load();
         }else if(q9==true && q10==false){
             Q10Load();
+        }else if(q10==true){
+            if(objectScript.score>6){
+                objectScript.panel.sprite = objectScript.winGame;
+                objectScript.scoreBoard.SetActive(true);
+                objectScript.scoreBoardText.text="Veiksmīga spēle";
+                objectScript.iziet.gameObject.SetActive(true);
+                objectScript.restart.gameObject.SetActive(true);
+                audioScript.audioSource.Stop();
+                audioScript.PlayWin();
+            }else{
+                objectScript.panel.sprite = objectScript.loseGame;
+                objectScript.scoreBoard.SetActive(true);
+                objectScript.scoreBoardText.text="Bēdīga spēle";
+                objectScript.iziet.gameObject.SetActive(true);
+                objectScript.restart.gameObject.SetActive(true);
+                audioScript.audioSource.Stop();
+                audioScript.PlayLose();
+
+            }
         }
-        //pec 10tas atbildes ielades score screen
+        //pec 10tas atbildes ielades scoreBoard
         
     }
     private void Questions(){
@@ -96,6 +116,7 @@ public class ChangeButtonImage : MonoBehaviour
             if(button1Clicked==true){
                 objectScript.score++;
                 q1 = true;
+               scoreScript.UpdateScore();
             }else{
                 q1 = true;
             }
@@ -105,6 +126,7 @@ public class ChangeButtonImage : MonoBehaviour
             if(button2Clicked==true){
                 objectScript.score++;
                 q2=true;
+                scoreScript.UpdateScore();
             }else{
                q2=true;
             }
@@ -114,6 +136,7 @@ public class ChangeButtonImage : MonoBehaviour
             if(button1Clicked==true){
                 objectScript.score++;
                 q3 = true;
+                scoreScript.UpdateScore();
             }else{
                 q3 = true;
             }
@@ -122,6 +145,7 @@ public class ChangeButtonImage : MonoBehaviour
              if(button3Clicked==true){
                 objectScript.score++;
                 q4 = true;
+                scoreScript.UpdateScore();
             }else{
                 q4 = true;
             }
@@ -130,6 +154,7 @@ public class ChangeButtonImage : MonoBehaviour
             if(button3Clicked==true){
                 objectScript.score++;
                 q5 = true;
+                scoreScript.UpdateScore();
             }else{
                 q5 = true;
             }
@@ -138,6 +163,7 @@ public class ChangeButtonImage : MonoBehaviour
             if(button3Clicked==true){
                 objectScript.score++;
                 q6 = true;
+                scoreScript.UpdateScore();
             }else{
                 q6 = true;
             }
@@ -146,6 +172,7 @@ public class ChangeButtonImage : MonoBehaviour
             if(button2Clicked==true){
                 objectScript.score++;
                 q7 = true;
+                scoreScript.UpdateScore();
             }else{
                 q7 = true;
             }
@@ -154,6 +181,7 @@ public class ChangeButtonImage : MonoBehaviour
             if(button2Clicked==true){
                 objectScript.score++;
                 q8 = true;
+                scoreScript.UpdateScore();
             }else{
                 q8 = true;
             }
@@ -162,6 +190,7 @@ public class ChangeButtonImage : MonoBehaviour
             if(button4Clicked==true){
                 objectScript.score++;
                 q9 = true;
+                scoreScript.UpdateScore();
             }else{
                 q9 = true;
             }
@@ -170,6 +199,7 @@ public class ChangeButtonImage : MonoBehaviour
             if(button1Clicked==true){
                 objectScript.score++;
                 q10 = true;
+                scoreScript.UpdateScore();
             }else{
                 q10 = true;
             }

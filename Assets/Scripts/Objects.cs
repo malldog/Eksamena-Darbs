@@ -16,4 +16,16 @@ public Text questionText;
     public Sprite img2;
     public Sprite img3;
     public float score;
+    public Text scoreText;
+    public GameObject scoreBoard;
+    public Text scoreBoardText;
+    public Image moneyBoard;
+    public Sprite score0; public Sprite score1; public Sprite score2; public Sprite score3;
+    public Sprite score4; public Sprite score5; public Sprite score6; public Sprite score7;
+    public Sprite score8; public Sprite score9; public Sprite score10;
+    public Image panel;
+    public Sprite winGame;
+    public Sprite loseGame;
+    public Button iziet;
+    public Button restart;
 }
