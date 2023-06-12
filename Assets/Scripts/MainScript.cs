@@ -210,64 +210,64 @@ public class MainScript : MonoBehaviour
     }
     //ielade otro jautajumu
     private void Q2Load(){
-    objectScript.questionText.text = "celebrant?";
-    objectScript.button1txt.text="jatbildd";
-    objectScript.button2txt.text = "bbbb";
-    objectScript.button3txt.text = "ddd";
-    objectScript.button4txt.text = "eee12331";
+    objectScript.questionText.text = "Kura ir pareizā do while sintakse?";
+    objectScript.button1txt.text="do{}while(paziņojums)";
+    objectScript.button2txt.text = "do{}while(nosacījums)";
+    objectScript.button3txt.text = "while(paziņojums){}";
+    objectScript.button4txt.text = "while(nosacījums){}";
     }
     //ielade treso jautajumu
     private void Q3Load(){
-    objectScript.questionText.text = "Pareizs termins ciklam ar pecnosacijumu?";
-    objectScript.button1txt.text="ff";
-    objectScript.button2txt.text = "aa";
-    objectScript.button3txt.text = "3";
-    objectScript.button4txt.text = "tt";
+    objectScript.questionText.text = "Priekšlaicīgai iziešanai no do while izmanto?";
+    objectScript.button1txt.text="break";
+    objectScript.button2txt.text = "exit";
+    objectScript.button3txt.text = "quit";
+    objectScript.button4txt.text = "stop";
     }
     private void Q4Load(){
-    objectScript.questionText.text = "Pareizs termins ciklam ar pecnosacijumu?";
-    objectScript.button1txt.text="ff";
-    objectScript.button2txt.text = "aa";
-    objectScript.button3txt.text = "3";
-    objectScript.button4txt.text = "tt";
+    objectScript.questionText.text = "Jaidoma q";
+    objectScript.button1txt.text="s";
+    objectScript.button2txt.text = "d";
+    objectScript.button3txt.text = "f";
+    objectScript.button4txt.text = "gg";
     }
     private void Q5Load(){
-    objectScript.questionText.text = "Pareizs termins ciklam ar pecnosacijumu?";
-    objectScript.button1txt.text="ff";
-    objectScript.button2txt.text = "aa";
-    objectScript.button3txt.text = "3";
-    objectScript.button4txt.text = "tt";
+    objectScript.questionText.text = "Vai vienā do while var būt vēlviens do while?";
+    objectScript.button1txt.text="Nē";
+    objectScript.button2txt.text = "Ja nosacījums ir nepaties";
+    objectScript.button3txt.text = "Jā";
+    objectScript.button4txt.text = "Ja nosacījums ir paties";
     }
     private void Q6Load(){
-    objectScript.questionText.text = "Pareizs termins ciklam ar pecnosacijumu?";
-    objectScript.button1txt.text="ff";
-    objectScript.button2txt.text = "aa";
-    objectScript.button3txt.text = "3";
-    objectScript.button4txt.text = "tt";
+    objectScript.questionText.text = "Cikls ar skaitītāju ir do while cikls?";
+    objectScript.button1txt.text= "Jā";
+    objectScript.button2txt.text = "Nē tas ir while loop";
+    objectScript.button3txt.text = "Nē tas ir for loop";
+    objectScript.button4txt.text = "Nē tāda nav";
     }
     private void Q7Load(){
-    objectScript.questionText.text = "Pareizs termins ciklam ar pecnosacijumu?";
-    objectScript.button1txt.text="ff";
-    objectScript.button2txt.text = "aa";
-    objectScript.button3txt.text = "3";
-    objectScript.button4txt.text = "tt";
+    objectScript.questionText.text = "Kad tiek izpildīts nosacījums do while ciklā?";
+    objectScript.button1txt.text="Pēc cikla";
+    objectScript.button2txt.text = "Pēc paziņojuma";
+    objectScript.button3txt.text = "Pirms paziņojuma";
+    objectScript.button4txt.text = "Pirms cikla";
     }
     private void Q8Load(){
-    objectScript.questionText.text = "Pareizs termins ciklam ar pecnosacijumu?";
-    objectScript.button1txt.text="ff";
-    objectScript.button2txt.text = "aa";
-    objectScript.button3txt.text = "3";
-    objectScript.button4txt.text = "tt";
+    objectScript.questionText.text = "Kurš ir pareizs do while cikls?";
+    objectScript.button1txt.text="while(){x==true}";
+    objectScript.button2txt.text = "do{}while(x==true)";
+    objectScript.button3txt.text = "do{x==true}while()";
+    objectScript.button4txt.text = "while(x==true){}";
     }
     private void Q9Load(){
-    objectScript.questionText.text = "Pareizs termins ciklam ar pecnosacijumu?";
-    objectScript.button1txt.text="ff";
-    objectScript.button2txt.text = "aa";
-    objectScript.button3txt.text = "3";
-    objectScript.button4txt.text = "tt";
+    objectScript.questionText.text = "Pareizs do while cikla pielietojums?";
+    objectScript.button1txt.text= "do(x!=3)while{}";
+    objectScript.button2txt.text = "do()while{x!=3}";
+    objectScript.button3txt.text = "do{x!=3}while()";
+    objectScript.button4txt.text = "do{}while(x!=3)";
     }
     private void Q10Load(){
-    objectScript.questionText.text = "Pareizs termins ciklam ar pecnosacijumu?";
+    objectScript.questionText.text = "jaizdoma q";
     objectScript.button1txt.text="ff";
     objectScript.button2txt.text = "aa";
     objectScript.button3txt.text = "3";
