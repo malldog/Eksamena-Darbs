@@ -53,7 +53,8 @@ public class MainScript : MonoBehaviour
         button1Clicked=false;
         button2Clicked=false;
         button4Clicked=false;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(3.5f);
+        audioScript.PlaySound1();
         objectScript.button1.image.sprite = objectScript.img3;
         objectScript.button2.image.sprite = objectScript.img3;
         objectScript.button3.image.sprite = objectScript.img3;
@@ -65,7 +66,7 @@ public class MainScript : MonoBehaviour
     }
     //3 sekundes parada pareizo atbildi
     private IEnumerator ShowCorrectAnswers(){
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(3.5f);
         //ja pirmais jautajums ir un otrais nav
         if(q1==true && q2==false){
             Q2Load();
@@ -88,24 +89,8 @@ public class MainScript : MonoBehaviour
         }else if(q9==true && q10==false){
             Q10Load();
         }else if(q10==true){
-            if(objectScript.score>6){
-                objectScript.panel.sprite = objectScript.winGame;
-                objectScript.scoreBoard.SetActive(true);
-                objectScript.scoreBoardText.text="Veiksmīga spēle";
-                objectScript.iziet.gameObject.SetActive(true);
-                objectScript.restart.gameObject.SetActive(true);
-                audioScript.audioSource.Stop();
-                audioScript.PlayWin();
-            }else{
-                objectScript.panel.sprite = objectScript.loseGame;
-                objectScript.scoreBoard.SetActive(true);
-                objectScript.scoreBoardText.text="Bēdīga spēle";
-                objectScript.iziet.gameObject.SetActive(true);
-                objectScript.restart.gameObject.SetActive(true);
-                audioScript.audioSource.Stop();
-                audioScript.PlayLose();
-
-            }
+            StartCoroutine(EndGame());
+            
         }
         //pec 10tas atbildes ielades scoreBoard
         
@@ -115,93 +100,93 @@ public class MainScript : MonoBehaviour
         if(q1==false){
             if(button1Clicked==true){
                 objectScript.score++;
-                q1 = true;
+                q1 = true; audioScript.PlaySound3();
                scoreScript.UpdateScore();
             }else{
-                q1 = true;
+                q1 = true; audioScript.PlaySound2();
             }
             objectScript.button1.image.sprite = objectScript.img2;
 //otrais jautajums 2. pareiz
         }else if(q2==false){
             if(button2Clicked==true){
                 objectScript.score++;
-                q2=true;
+                q2=true; audioScript.PlaySound3();
                 scoreScript.UpdateScore();
             }else{
-               q2=true;
+               q2=true;  audioScript.PlaySound2();
             }
             objectScript.button2.image.sprite=objectScript.img2;
 //tresais jautajums 1. pareiz
         }else if(q3==false){
             if(button1Clicked==true){
                 objectScript.score++;
-                q3 = true;
+                q3 = true; audioScript.PlaySound3();
                 scoreScript.UpdateScore();
             }else{
-                q3 = true;
+                q3 = true; audioScript.PlaySound2();
             }
             objectScript.button1.image.sprite = objectScript.img2;
         }else if(q4==false){
              if(button3Clicked==true){
                 objectScript.score++;
-                q4 = true;
+                q4 = true; audioScript.PlaySound3();
                 scoreScript.UpdateScore();
             }else{
-                q4 = true;
+                q4 = true; audioScript.PlaySound2();
             }
             objectScript.button3.image.sprite =objectScript.img2;   
         }else if(q5==false){
             if(button3Clicked==true){
                 objectScript.score++;
-                q5 = true;
+                q5 = true;  audioScript.PlaySound3();
                 scoreScript.UpdateScore();
             }else{
-                q5 = true;
+                q5 = true; audioScript.PlaySound2();
             }
             objectScript.button3.image.sprite = objectScript.img2; 
         }else if(q6==false){
             if(button3Clicked==true){
                 objectScript.score++;
-                q6 = true;
+                q6 = true; audioScript.PlaySound3();
                 scoreScript.UpdateScore();
             }else{
-                q6 = true;
+                q6 = true; audioScript.PlaySound2();
             }
             objectScript.button3.image.sprite = objectScript.img2; 
         }else if(q7==false){
             if(button2Clicked==true){
                 objectScript.score++;
-                q7 = true;
+                q7 = true; audioScript.PlaySound3();
                 scoreScript.UpdateScore();
             }else{
-                q7 = true;
+                q7 = true; audioScript.PlaySound2();
             }
             objectScript.button2.image.sprite = objectScript.img2; 
         }else if(q8==false){
             if(button2Clicked==true){
                 objectScript.score++;
-                q8 = true;
+                q8 = true; audioScript.PlaySound3();
                 scoreScript.UpdateScore();
             }else{
-                q8 = true;
+                q8 = true; audioScript.PlaySound2();
             }
             objectScript.button2.image.sprite = objectScript.img2; 
         }else if(q9==false){
             if(button4Clicked==true){
                 objectScript.score++;
-                q9 = true;
+                q9 = true; audioScript.PlaySound3();
                 scoreScript.UpdateScore();
             }else{
-                q9 = true;
+                q9 = true; audioScript.PlaySound2();
             }
             objectScript.button4.image.sprite = objectScript.img2; 
         }else if(q10==false){
             if(button1Clicked==true){
                 objectScript.score++;
-                q10 = true;
+                q10 = true; audioScript.PlaySound3();
                 scoreScript.UpdateScore();
             }else{
-                q10 = true;
+                q10 = true; audioScript.PlaySound2();
             }
             objectScript.button1.image.sprite = objectScript.img2; 
         }
@@ -272,6 +257,28 @@ public class MainScript : MonoBehaviour
     objectScript.button2txt.text = "aa";
     objectScript.button3txt.text = "3";
     objectScript.button4txt.text = "tt";
+    }
+
+//Speles beigas
+    private IEnumerator EndGame(){
+        audioScript.lastChoice.Play();
+        yield return new WaitForSeconds(2.5f);
+            if(objectScript.score>6){
+                audioScript.PlayVictory();
+                objectScript.panel.sprite = objectScript.winGame;
+                objectScript.scoreBoard.SetActive(true);
+                objectScript.scoreBoardText.text="Veiksmīga spēle";
+                objectScript.iziet.gameObject.SetActive(true);
+                objectScript.restart.gameObject.SetActive(true);
+            }else{
+                audioScript.PlayLose();
+                objectScript.panel.sprite = objectScript.loseGame;
+                objectScript.scoreBoard.SetActive(true);
+                objectScript.scoreBoardText.text="Bēdīga spēle";
+                objectScript.iziet.gameObject.SetActive(true);
+                objectScript.restart.gameObject.SetActive(true);
+
+            }
     }
 }
 

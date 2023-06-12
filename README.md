@@ -1,2 +1,16 @@
 # Eksamena-Darbs
-Riharda Moskovoja eksāmena darbs sistēmu programmēšānā
+Riharda Moskovoja 2. semestra eksāmena darbs sistēmu programmēšānā
+
+## Darbs rūpīgi izgatavots c# unity dzinī
+
+
+## Darāmo darbu saraksts
+- [x] Programmā izgatavoti paziņojumi par katru pareizi vai nepareizi atbildēto jautājumu
+- [x] Programma papildināta ar skaņas efektiem
+- [x] Programmā izgatavoti skripti
+- [ ] Programmā izgatavoti 10 testa jautājumi
+- [x] UML diagrammas
+- [ ] Mācību materiāls
+- [ ] Prezentācija par darba gaitu
+
+- [ ] Darbs pabeigts

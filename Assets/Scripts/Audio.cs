@@ -3,45 +3,52 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Audio : MonoBehaviour {
-public AudioClip sound1;
 public Objects objectScript;
 public MainScript mainScript;
-    public AudioClip sound2;
-    public AudioClip loseSound;
-    public AudioClip winSound;
     public float delay = 1f;
-
-    public AudioSource audioSource;
+    public AudioSource audioSource1;
+    public AudioSource audioSource2;
+    public AudioSource audioSource3;
+    public AudioSource lastChoice, winGame, loseGame;
 	void Start () {
-		audioSource = GetComponent<AudioSource>();
-        PlaySound1();
+		
 	}
     private void Update(){
 
-        // if (mainScript.button1Clicked==true || mainScript.button2Clicked==true ||
-        //  mainScript.button3Clicked==true || mainScript.button4Clicked==true){
-        //     audioSource.Stop();
-        //  }
-        // }else{
-        //     audioSource.clip = sound2;
-        //     audioSource.Play();
-        // }
+       
     }
-	private void PlaySound1(){
-        audioSource.clip = sound1;
-        audioSource.Play();
-        Invoke("PlaySound2", delay);
+    //doma jautajumu
+    public void PlaySound1(){
+        audioSource1.Play();
+        audioSource2.Stop();
+        audioSource3.Stop();
+        winGame.Stop(); loseGame.Stop();
     }
-	private void PlaySound2(){
-        audioSource.clip = sound2;
-        audioSource.Play();
+    //nepareiza atbilde
+    public void PlaySound2(){
+        audioSource1.Stop();
+        audioSource2.Play();
+        audioSource3.Stop();
+    }
+    //pareiza atbilde
+    public void PlaySound3(){
+        audioSource1.Stop();
+        audioSource2.Stop();
+        audioSource3.Play();
+        
+    }
+    
+    public void PlayVictory(){
+        winGame.Play();
+        audioSource1.Stop();
+        audioSource2.Stop();
+        audioSource3.Stop();
     }
     public void PlayLose(){
-        audioSource.clip = loseSound;
-        audioSource.Play();
+        loseGame.Play();
+        audioSource1.Stop();
+        audioSource2.Stop();
+        audioSource3.Stop();
     }
-    public void PlayWin(){
-        audioSource.clip = winSound;
-        audioSource.Play();
-    }
+	
 }
