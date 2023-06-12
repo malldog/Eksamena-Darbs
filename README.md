@@ -8,9 +8,9 @@ Riharda Moskovoja 2. semestra eksāmena darbs sistēmu programmēšānā
 - [x] Programmā izgatavoti paziņojumi par katru pareizi vai nepareizi atbildēto jautājumu
 - [x] Programma papildināta ar skaņas efektiem
 - [x] Programmā izgatavoti skripti
-- [ ] Programmā izgatavoti 10 testa jautājumi
+- [x] Programmā izgatavoti 10 testa jautājumi
 - [x] UML diagrammas
-- [ ] Mācību materiāls
+- [x] Mācību materiāls
 - [ ] Prezentācija par darba gaitu
-
+...
 - [ ] Darbs pabeigts

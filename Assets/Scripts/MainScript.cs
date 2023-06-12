@@ -210,11 +210,11 @@ public class MainScript : MonoBehaviour
     objectScript.button4txt.text = "stop";
     }
     private void Q4Load(){
-    objectScript.questionText.text = "Jaidoma q";
-    objectScript.button1txt.text="s";
-    objectScript.button2txt.text = "d";
-    objectScript.button3txt.text = "f";
-    objectScript.button4txt.text = "gg";
+    objectScript.questionText.text = "Izkļūt no bezgalīga cikla var...";
+    objectScript.button1txt.text="Manuāli";
+    objectScript.button2txt.text = "ar break";
+    objectScript.button3txt.text = "ar break un manuāli";
+    objectScript.button4txt.text = "Neviens no minētajiem";
     }
     private void Q5Load(){
     objectScript.questionText.text = "Vai vienā do while var būt vēlviens do while?";
@@ -252,11 +252,12 @@ public class MainScript : MonoBehaviour
     objectScript.button4txt.text = "do{}while(x!=3)";
     }
     private void Q10Load(){
-    objectScript.questionText.text = "jaizdoma q";
-    objectScript.button1txt.text="ff";
-    objectScript.button2txt.text = "aa";
-    objectScript.button3txt.text = "3";
-    objectScript.button4txt.text = "tt";
+    objectScript.questionText.text = "Ja nosacījums piepildās, tad cikls sākas no jauna un process"
+    +"turpinās līdz nosacījums kļūst...";
+    objectScript.button1txt.text="par nepatiesu";
+    objectScript.button2txt.text = "par patiesu";
+    objectScript.button3txt.text = "līdz apnīk";
+    objectScript.button4txt.text = "neviens no minētajiem";
     }
 
 //Speles beigas
