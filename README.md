@@ -11,6 +11,6 @@ Riharda Moskovoja 2. semestra eksāmena darbs sistēmu programmēšānā
 - [x] Programmā izgatavoti 10 testa jautājumi
 - [x] UML diagrammas
 - [x] Mācību materiāls
-- [ ] Prezentācija par darba gaitu
+- [x] Prezentācija par darba gaitu
 ...
-- [ ] Darbs pabeigts
+- [x] Darbs pabeigts
